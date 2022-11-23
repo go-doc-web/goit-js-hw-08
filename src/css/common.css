@@ -16,3 +16,8 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.list {
+  list-style: none;
+  padding: 0;
+}
