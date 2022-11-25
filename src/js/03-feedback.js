@@ -10,14 +10,17 @@ const refs = {
 };
 
 const onFeedbackFormInput = e => {
-  formData[e.target.name] = e.target.value;
+  formData.email = refs.formInput.value;
+  formData.message = refs.formTextarea.value;
 
   localStorage.setItem(LOCALSTORAGE_TEXTAREA_KEY, JSON.stringify(formData));
 };
 
 const onFeedbackFormSubmit = e => {
   e.preventDefault();
+
   localStorage.removeItem(LOCALSTORAGE_TEXTAREA_KEY);
+
   e.currentTarget.reset();
   console.log(formData);
 };
